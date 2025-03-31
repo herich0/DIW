@@ -1,0 +1,82 @@
+/* Estilização geral */
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 80%;
+    margin: auto;
+    background-color: #f8f9fa;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1 {
+    background-color: coral;
+    padding: 20px;
+    text-align: center;
+    border: 5px solid red;
+    border-radius: 10px;
+}
+
+h2 {
+    background-color: aqua;
+    width: 50%;
+    padding: 10px;
+    margin: 20px auto;
+    text-align: center;
+    border: 3px dashed blue;
+    border-radius: 5px;
+}
+
+p, li {
+    background-color: lightgray;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-left: 5px solid gray;
+}
+
+ul, ol {
+    padding-left: 40px;
+}
+
+li {
+    list-style-type: square;
+    list-style-position: inside;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: red;
+}
+
+a:visited {
+    color: blue;
+}
+
+a:hover {
+    background-color: darkgray;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+a:active {
+    background-color: yellow;
+}
+
+/* Seções específicas */
+hr {
+    border: 2px solid black;
+}
+
+.p1 {
+    width: 500px;
+    background-color: wheat;
+    padding: 40px;
+    box-sizing: content-box;
+}
+
+.p2 {
+    width: 500px;
+    background-color: gray;
+    padding: 40px;
+    box-sizing: border-box;
+}
