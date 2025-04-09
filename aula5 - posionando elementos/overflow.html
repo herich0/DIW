@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Overflow</title>
+    <style>
+      .container {
+        border: 2px solid black;
+        padding: 16px;
+        width: 300 px;
+        margin-bottom: 16px;
+        height: 300px;
+        background-color: rgba(255, 0, 0, 0.5);
+      }
+      .item {
+        background-color: darkkhaki;
+        margin-bottom: 10px;
+        padding: 5px;
+      }
+      .fit-content .item {
+        width: fit-content;
+      }
+      .min-content .item {
+        width: min-content;
+      }
+      .max-content .item {
+        width: max-content;
+      }
+      .overflow-hidden {
+        overflow: hidden;
+      }
+      .overflow-scroll {
+        overflow: scroll;
+      }
+      .overflow-auto {
+        overflow: auto;
+      }
+      .overflow-x-hidden {
+        overflow-x: hidden;
+      }
+      .overflow-y-hidden {
+        overflow-y: hidden;
+      }
+      .overflow-visible {
+        overflow: visible;
+      }
+      .overflow-x-scroll {
+        overflow-x: scroll;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container fit-content overflow-auto">
+      <div class="item">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque et
+        deserunt porro reiciendis minus voluptates, ipsam distinctio minima,
+        vitae repudiandae, excepturi exercitationem! Qui ad rem, quam nam unde
+        optio minima.
+      </div>
+      <div class="item">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore in totam
+        saepe sapiente adipisci ea.
+      </div>
+      <div class="item">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi quasi
+        consequatur aliquid sapiente harum alias, ex voluptate quas odio
+        distinctio facere veritatis error repudiandae dolorum deleniti saepe
+        corporis quo nemo molestiae? Modi neque reiciendis, commodi, beatae non
+        totam similique suscipit quisquam incidunt nulla perferendis porro iure
+        ipsa, minus quis iste.
+      </div>
+    </div>
+    <div class="container min-content overflow-visible">
+        <div class="item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque et
+            deserunt porro reiciendis minus voluptates, ipsam distinctio minima,
+            vitae repudiandae, excepturi exercitationem! Qui ad rem, quam nam unde
+            optio minima.
+          </div>
+          <div class="item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore in totam
+            saepe sapiente adipisci ea.
+          </div>
+          <div class="item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi quasi
+            consequatur aliquid sapiente harum alias, ex voluptate quas odio
+            distinctio facere veritatis error repudiandae dolorum deleniti saepe
+            corporis quo nemo molestiae? Modi neque reiciendis, commodi, beatae non
+            totam similique suscipit quisquam incidunt nulla perferendis porro iure
+            ipsa, minus quis iste.
+          </div>
+    </div>
+    <div class="container max-content overflow-x-scroll">
+        <div class="item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque et
+            deserunt porro reiciendis minus voluptates, ipsam distinctio minima,
+            vitae repudiandae, excepturi exercitationem! Qui ad rem, quam nam unde
+            optio minima.
+          </div>
+          <div class="item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore in totam
+            saepe sapiente adipisci ea.
+          </div>
+          <div class="item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi quasi
+            consequatur aliquid sapiente harum alias, ex voluptate quas odio
+            distinctio facere veritatis error repudiandae dolorum deleniti saepe
+            corporis quo nemo molestiae? Modi neque reiciendis, commodi, beatae non
+            totam similique suscipit quisquam incidunt nulla perferendis porro iure
+            ipsa, minus quis iste.
+          </div>
+    </div>
+  </body>
+</html>
