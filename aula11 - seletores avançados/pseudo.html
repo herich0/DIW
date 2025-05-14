@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Pseudo Classes</title>
+    <style>
+        button{
+            background-color: #7a7979;
+            color: #FFF;
+            border: none;
+            padding: 1em;
+            margin-bottom: 1em;
+        }
+        button:disabled{
+            opacity: .5;
+        }
+        p:empty::before{
+            content: 'paragrafo';
+        }
+        a:focus, a:hover{
+            background-color: yellow;
+        }
+        input[type="text"]:placeholder-shown{
+            background-color: red;
+            border: none;
+            padding: .5em;
+        }
+    </style>
+</head>
+<body>
+    <button>Vai</button>
+    <br />
+    <button disabled>Vai disabled</button>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, rerum.</p>
+    <p> </p>
+    <p>teste</p>
+    <p></p>
+    <p>teste</p>
+    <ul>
+        <li><a href="#">link falso</a></li>
+        <li><a href="#">link falso</a></li>
+        <li><a href="#">link falso</a></li>
+        <li><a href="#">link falso</a></li>
+    </ul>
+    <form action="#">
+        <input type="text" value="valor_inicial"><br/><br/>
+        <input type="text" value="valor" disabled><br/><br/>
+        <input type="text" value="valor" readonly><br/><br/>
+        <input type="text" placeholder="placeholder"><br/><br/>
+        <input type="text"><br/><br/>
+    </form>
+</body>
+</html>

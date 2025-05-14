@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+       p{
+        text-align: center;
+       }
+       p::before{
+        content: "<<<";
+       }
+       p::after{
+        content: ">>>";
+       }
+       div::before{
+        content: "";
+        width: 1em;
+        height: 1em;
+        background-color: red;
+        display: block;
+       }    
+       div::after{
+        content: url("https://images.freeimages.com/image/thumbs/6d8/direction-sign-right-arrow-icon-5698209.png");
+       }
+    </style>
+</head>
+<body>
+    <div>
+        <p>paragrafo com um texto simples</p>
+
+    </div>
+</body>
+</html>
