@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Auto row</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .gridContainer{
+            width: 90%;
+            gap: 10px;
+            background-color: #ccc;
+        }
+        .gridItem{
+            background-color: orange;
+            padding: 15px;
+            font-family: sans-serif;
+        }
+        /**GRID**/
+        .gridContainer{
+            display: grid;
+            grid-template-rows: 100px 100px;
+            grid-auto-rows: 30px 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="gridContainer">
+        <div class="gridItem">1</div>
+        <div class="gridItem">2</div>
+        <div class="gridItem">3</div>
+        <div class="gridItem">4</div>
+        <div class="gridItem">5</div>
+        <div class="gridItem">6</div>
+        <div class="gridItem">7</div>
+        <div class="gridItem">8</div>
+    </div>
+</body>
+</html>
