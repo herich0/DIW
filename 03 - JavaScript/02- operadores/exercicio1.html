@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores</title>
+    <script>
+        let n1= parseFloat(prompt('Digite a nota de 0 a 10'))
+        let n2= parseFloat(prompt('Digite a nota de 0 a 10'))
+        if(n1>=0 && n1<=10 || n2<=10 && n2>=0){
+            let media = (n1+n2)/2
+            if(media >=7)
+                alert ('Aprovado')
+            else if (media>=5)
+                alert('Recuperação')
+            else 
+                alert('Reprovado')
+        }
+        else {
+            if (isNaN(n1) || isNaN(n2)){
+                alert ("digite apenas numeros")
+            }else 
+                alert ('numeros invalidos')
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
