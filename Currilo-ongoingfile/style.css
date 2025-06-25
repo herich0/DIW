@@ -20,37 +20,35 @@ body {
   background-color: #ffffff;
   color: var(--cor-texto);
   padding: 1rem;
-  line-height: 1.6;
+  line-height: 1.4;
 }
 
 /* Cabeçalho */
 .header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  gap: 1rem;
   background-color: var(--cor-primaria);
   color: white;
-  padding: 2rem 1rem;
+  padding: 1rem;
   border-radius: var(--card-radius);
-  text-align: center;
 }
 
 .header h1 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 
 .subtitle {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #b3d1ff;
 }
 
 .header-photo img {
-  width: 120px;
-  height: 120px;
+  width: 3.5cm;
+  height: 3.5cm;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid white;
+  border: 2px solid white;
 }
 
 /* Container principal */
@@ -64,10 +62,9 @@ body {
 /* Cartões */
 .card {
   background-color: var(--cor-secundaria);
-  padding: 1.2rem;
+  padding: 0.8rem 1rem;
   border-radius: var(--card-radius);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease;
+  page-break-inside: avoid;
 }
 
 .card:hover {
@@ -76,19 +73,34 @@ body {
 
 .card h2 {
   color: var(--cor-primaria);
-  margin-bottom: 0.8rem;
-  border-bottom: 2px solid var(--cor-destaque);
-  padding-bottom: 0.4rem;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+  border-bottom: 1px solid var(--cor-destaque);
+}
+
+.card h3 {
+  margin-top: 0.5rem;
+  font-size: 1rem;
 }
 
 .card ul {
-  list-style: none;
+  list-style: disc inside;
   padding-left: 0;
+  margin-left: 1rem;
 }
 
 .card li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.duas-colunas {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.duas-colunas > div {
+  flex: 1;
 }
 
 /* Links */
@@ -104,8 +116,8 @@ a:hover {
 /* Rodapé */
 footer {
   text-align: center;
-  margin-top: 3rem;
-  font-size: 0.9rem;
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
   color: #666;
 }
 
@@ -159,75 +171,54 @@ footer {
 }
 
 @media print {
-    :root {
-        font-size: 12px;
-    }
+  :root {
+    font-size: 12px;
+  }
 
-    body {
-        background-color: white;
-        padding: 0;
-        margin: 0;
-        color: black;
-    }
+  body {
+    padding: 0;
+    margin: 1em;
+    background: white;
+    color: black;
+  }
 
-    header, footer {
-        background: none;
-        color: black;
-        border: none;
-        text-align: left;
-        padding: 0;
-    }
+  header, footer {
+    background: none;
+    color: black;
+    padding: 0;
+  }
 
-    .header {
-        flex-wrap: nowrap;
-        align-items: flex-start;
-    }
+  .header-photo img {
+    width: 3cm;
+    height: 3cm;
+    float: right;
+    margin-left: 1cm;
+    border: none;
+  }
 
-    .header-photo img {
-        width: 3.5cm;
-        height: 3.5cm;
-        float: right;
-        margin-left: 1cm;
-        border: none;
-        box-shadow: none;
-    }
+  .card {
+    background: none;
+    box-shadow: none;
+    padding: 0.5rem 0;
+  }
 
-    .container {
-        display: block;
-        padding: 0;
-        margin: 0;
-    }
+  a::after {
+    content: " (" attr(href) ")";
+    font-size: 0.9em;
+  }
 
-    .card {
-        box-shadow: none;
-        padding: 0.5rem 0;
-        page-break-inside: avoid;
-    }
+  .duas-colunas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+  }
 
-    h1, h2, h3 {
-        color: black;
-        margin-top: 1rem;
-    }
+  .duas-colunas > div {
+    width: 48%;
+  }
 
-    a::after {
-        content: " (" attr(href) ")";
-        font-size: 0.9em;
-    }
-
-    a {
-        color: black;
-        text-decoration: none;
-    }
-
-    ul {
-        margin-bottom: 1rem;
-    }
-
-    /* Remove efeitos visuais */
-    .card:hover,
-    a:hover {
-        background: none;
-        transform: none;
-        box-shadow: none;
-    }
+  .card h2{
+    color: black;
+  }
 }

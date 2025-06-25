@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Teste DOM</h1>
+    <div class="container">
+        <p>Teste 1</p>
+        <p>Lorem <a href="#">link</a>.</p>
+        <p>Teste 2</p>
+        <h2>lista</h2>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2
+                <ul>
+                    <li>Item2.a</li>
+                    <li>Item2.b</li>
+                    <li>Item2.c</li>
+                </ul>
+            </li>
+            <li>Item <a href="#">link</a></li>
+        </ul>
+    </div>
+    <script>
+        const h2=document.querySelector('h2')
+        const h2NextSibling= h2.nextElementSibling
+        h2NextSibling.style.background = "yellow"
+        const sublist =document.querySelector('ul ul')
+        const link =document.querySelector('a')
+        console.log(link.parentElement.children)
+        console.log(link.parentElement.childNodes)
+        console.log(link.parentElement.firstChild)
+        console.log(link.parentElement.firstElementChild)
+        console.log(link.parentElement.lastChild)
+        console.log(link.parentElement.lastElementChild)
+    </script>
+</body>
+</html>
