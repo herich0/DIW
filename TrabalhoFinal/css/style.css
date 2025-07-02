@@ -1,0 +1,382 @@
+/* =============================
+   🔁 RESET & VARIÁVEIS
+============================= */
+:root {
+  --color-bg: #e9f2fb;
+  --color-text: #222;
+  --color-accent: #5d3fd3;
+  --color-dark: #111;
+  --color-light: #fff;
+  --color-cta: #ffcc00;
+  --font-base: 'Segoe UI', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-base);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  overflow-x: hidden;
+  padding-top: 80px; /* espaço para header fixo */
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* =============================
+   🌐 HEADER
+============================= */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: var(--color-dark);
+  padding: 1rem 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.nav.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.8rem;
+  color: var(--color-light);
+  flex: 0 0 auto;
+}
+
+.mobile-nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex: 0 0 auto;
+  margin-left: 1rem;
+}
+.mobile-nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 3px;
+  margin: 4px 0;
+  background: var(--color-light);
+  transition: 0.3s;
+}
+
+.nav-links-wrapper {
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--color-light);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.nav-links a:hover {
+  color: var(--color-cta);
+}
+
+/* =============================
+   🎯 HERO SECTION
+============================= */
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('../img/bg-tft.jpg') center/cover no-repeat;
+  color: white;
+  padding: 6rem 2rem;
+  text-align: center;
+}
+.hero-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.hero-content p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+.cta-button {
+  background: var(--color-cta);
+  color: #000;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+.cta-button:hover {
+  background: #e6b800;
+}
+
+/* =============================
+   💡 FUNCIONALIDADES
+============================= */
+.section {
+  padding: 4rem 0;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-out;
+}
+.section.animado {
+  opacity: 1;
+  transform: translateY(0);
+}
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: inherit;
+}
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+.feature-card {
+  background: var(--color-light);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* =============================
+   📊 ESTATÍSTICAS
+============================= */
+.section-dark {
+  background: var(--color-dark);
+  color: white;
+}
+.stats-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.stat {
+  text-align: center;
+}
+.stat strong {
+  font-size: 2rem;
+  display: block;
+}
+
+/* =============================
+   💬 DEPOIMENTOS
+============================= */
+.testimonial-carousel {
+  display: grid;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+.testimonial-carousel blockquote {
+  background: var(--color-light);
+  padding: 2rem;
+  border-left: 6px solid var(--color-accent);
+  font-style: italic;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* =============================
+   📬 FORMULÁRIO
+============================= */
+.section-cta {
+  background: var(--color-accent);
+  color: white;
+  text-align: center;
+}
+.form {
+  max-width: 500px;
+  margin: 2rem auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+}
+.form label {
+  font-weight: bold;
+}
+.form input,
+.form select {
+  padding: 0.8rem;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+}
+.form button {
+  background: var(--color-dark);
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.form button:hover {
+  background: #333;
+}
+#mensagem-sucesso {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+.hidden {
+  display: none;
+}
+
+/* =============================
+   🔚 FOOTER
+============================= */
+.footer {
+  background: #000;
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+/* =============================
+   🌗 TEMA ESCURO
+============================= */
+body.dark-mode {
+  background: #0e0614;
+  color: #eee;
+}
+body.dark-mode header {
+  background: #100016;
+}
+body.dark-mode .form button {
+  background: #222;
+}
+body.dark-mode .feature-card,
+body.dark-mode .testimonial-carousel blockquote {
+  background: #333;
+  color: #eee;
+}
+body.dark-mode .form input,
+body.dark-mode .form select {
+  background: #444;
+  color: white;
+}
+
+/* =============================
+   📱 MOBILE & OFF-CANVAS MENU
+============================= */
+@media screen and (max-width: 48.75em) {
+  .features-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .nav.container {
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  .logo {
+    font-size: 1.5rem;
+  }
+  .nav-links-wrapper {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 75%;
+    max-width: 300px;
+    background: var(--color-dark);
+    transition: right 0.3s ease;
+    padding-top: 4rem;
+    z-index: 999;
+  }
+  .nav-links-wrapper.open {
+    right: 0;
+  }
+  .mobile-nav-toggle {
+    display: block;
+    position: relative;
+    z-index: 1001;
+  }
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-left: 2rem;
+  }
+  .nav-links a {
+    color: var(--color-light);
+    font-size: 1.2rem;
+  }
+  #tema-btn {
+    flex: 0 0 auto;
+    padding: 0.5rem;
+    margin-left: 1rem;
+  }
+  .stats-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  body.menu-open::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    z-index: 998;
+  }
+}
+
+/* =============================
+   📐 RESPONSIVO - BREAKPOINTS
+============================= */
+@media screen and (max-width: 56.25em) {
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 74em) {
+  .features-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+/* =============================
+   🎨 DIVISORES SVG
+============================= */
+.divisor {
+  line-height: 0;
+  background: none;
+  color: inherit;
+}
+.divisor svg {
+  display: block;
+  width: 100%;
+  height: 80px;
+}

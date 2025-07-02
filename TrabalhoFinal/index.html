@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TFT Tracker</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/script.js"></script>
+  </head>
+  <body>
+    <!--  Cabeçalho -->
+    <header class="header">
+      <nav class="nav container">
+        <h1 class="logo">TFT Tracker</h1>
+
+        <!-- Menu padrão (desktop) e menu mobile (off‑canvas) -->
+        <div class="nav-links-wrapper">
+          <ul class="nav-links">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#funcionalidades">Funcionalidades</a></li>
+            <li><a href="#estatisticas">Estatísticas</a></li>
+            <li><a href="#depoimentos">Depoimentos</a></li>
+            <li><a href="#cadastro">Cadastro</a></li>
+          </ul>
+        </div>
+
+        <button id="tema-btn">🌙</button>
+        <!-- Botão hamburger para mobile -->
+        <button
+          id="mobile-nav-toggle"
+          class="mobile-nav-toggle"
+          aria-label="Abrir menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Hero / Chamada principal -->
+    <main id="inicio" class="hero-section bg-light-1">
+      <div class="hero-content container">
+        <h2>Suba de elo com inteligência.</h2>
+        <p>
+          Use o TFT Tracker para analisar suas partidas, descobrir as melhores
+          comps e dominar o meta.
+        </p>
+        <a href="#cadastro" class="cta-button">Comece agora</a>
+      </div>
+    </main>
+
+    <!-- Divisor SVG -->
+    <div class="divisor">
+      <svg viewBox="0 0 1440 100">
+        <path fill="currentColor" d="M0,64L1440,0L1440,100L0,100Z"></path>
+      </svg>
+    </div>
+
+    <!-- Funcionalidades -->
+    <section id="funcionalidades" class="section container bg-light-2">
+      <h3 class="section-title">Funcionalidades do TFT Tracker</h3>
+      <div class="features-grid">
+        <div class="feature-card">📊 Histórico detalhado das partidas</div>
+        <div class="feature-card">📈 Estatísticas por elo</div>
+        <div class="feature-card">🧠 Sugestões de comps por meta</div>
+        <div class="feature-card">🛎 Alertas de mudanças em patches</div>
+      </div>
+    </section>
+
+    <!-- Divisor SVG -->
+    <div class="divisor">
+      <svg viewBox="0 0 1440 100">
+        <path fill="currentColor" d="M0,0L1440,64L1440,100L0,100Z"></path>
+      </svg>
+    </div>
+
+    <!-- Estatísticas -->
+    <section id="estatisticas" class="section bg-light-3">
+      <div class="container">
+        <h3 class="section-title">Nossos Números</h3>
+        <div class="stats-grid">
+          <div class="stat">
+            <strong>+5.000</strong>
+            <p>usuários ativos</p>
+          </div>
+          <div class="stat">
+            <strong>98%</strong>
+            <p>satisfação dos jogadores</p>
+          </div>
+          <div class="stat">
+            <strong>10.000+</strong>
+            <p>composições analisadas</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Divisor SVG -->
+    <div class="divisor">
+      <svg viewBox="0 0 1440 100">
+        <path fill="currentColor" d="M0,64L1440,0L1440,100L0,100Z"></path>
+      </svg>
+    </div>
+
+    <!-- Depoimentos -->
+    <section id="depoimentos" class="section container bg-light-1">
+      <h3 class="section-title">O que os jogadores dizem</h3>
+      <div class="testimonial-carousel">
+        <blockquote>
+          "Comecei a usar o TFT Tracker e finalmente entendi onde errava!"
+        </blockquote>
+        <blockquote>
+          "Design limpo, direto ao ponto. Me ajudou a subir do Prata pro
+          Platina."
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- Divisor SVG -->
+    <div class="divisor">
+      <svg viewBox="0 0 1440 100">
+        <path fill="currentColor" d="M0,0L1440,64L1440,100L0,100Z"></path>
+      </svg>
+    </div>
+
+    <!-- Formulário de Cadastro -->
+    <section id="cadastro" class="section section-cta bg-light-2">
+      <div class="container">
+        <h3 class="section-title">
+          Quer melhorar no TFT? Cadastre-se e receba novidades!
+        </h3>
+        <form id="cadastro-form" class="form">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="servidor">Servidor:</label>
+          <select id="servidor" name="servidor" required>
+            <option value="">Selecione</option>
+            <option value="BR">BR</option>
+            <option value="NA">NA</option>
+            <option value="EUW">EUW</option>
+          </select>
+
+          <button type="submit">Cadastrar</button>
+        </form>
+        <p id="mensagem-sucesso" class="hidden">
+          Obrigado! Em breve entraremos em contato.
+        </p>
+      </div>
+    </section>
+
+    <!-- Divisor SVG -->
+    <div class="divisor">
+      <svg viewBox="0 0 1440 100">
+        <path fill="currentColor" d="M0,64L1440,0L1440,100L0,100Z"></path>
+      </svg>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="footer bg-light-3">
+      <div class="container">
+        <p>
+          &copy; 2025 - Herich Gabriel de Campos | Projeto acadêmico sem
+          afiliação à Riot Games.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
